@@ -27,6 +27,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
+/**
+ * tests server status controller
+ */
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ServerStatusControllerTests {
@@ -49,4 +52,8 @@ public class ServerStatusControllerTests {
                 .andExpect(jsonPath("$.contentHeader").value("Server Status requested by RebYid"));
     }
 
+    @Test
+    public void serverStatusTroubleshooter() throws Exception {
+
+    }
 }
